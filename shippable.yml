@@ -9,6 +9,7 @@ before_script:
   - mkdir -p shippable/codecoverage
   - mysql -e 'create database if not exists test;'
   - echo "Feature X"
+  - exit 1
 
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php
